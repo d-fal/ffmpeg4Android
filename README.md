@@ -23,5 +23,10 @@ Now, all you need to do is :<br>
 The shared libraries will be placed in build-ffmpeg folder.
 
 <hr>
-<h3>Note: This project support the latest head of FFMPEG(3.4.1)</h3>
+<h3>Note: This project support the latest head of FFMPEG(3.4.1)</h3><br>
+
+
 Enjoy!
+<hr>
+
+Inspired from https://github.com/WritingMinds/ffmpeg-android
