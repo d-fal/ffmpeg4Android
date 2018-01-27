@@ -10,11 +10,11 @@ get all the prject files and submodules
 cd to the clonned project:
 cd ffmpeg4Android
 
-open buid_ffmpeg_for_android.sh in a editor and edit the following function so as to it target to your NDK
+open buid_ffmpeg_for_android.sh in a editor and edit the following function in line 6, so as to it target to your NDK
 
-getNDK(){
-    echo "$HOME/Android/ndk" #root to your NDK
-}
+getNDK(){<br>
+    echo "$HOME/Android/ndk" #root to your NDK <br>
+}<br>
 
 Now, all you need to do is :<br>
 
