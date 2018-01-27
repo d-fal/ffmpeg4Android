@@ -7,13 +7,13 @@ export COMMON_FLAGS="--enable-decoder=rawvideo --enable-protocol=file"
 export PREFIX=../ffmpeg-build
 
 # Build arm v6 v7a
-#./build_android_armeabi.sh
+./build_android_armeabi.sh
 
-#./build_android_armeabi_v7a.sh
+./build_android_armeabi_v7a.sh
 
 # Build arm64 v8a
 ./build_android_arm64_v8a.sh
-exit -1
+
 # Build x86
 ./build_android_x86.sh
 
