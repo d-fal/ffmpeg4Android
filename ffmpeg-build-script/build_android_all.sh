@@ -2,8 +2,9 @@
 
 chmod a+x build_android_*.sh
 
-COMMON_FLAGS="--enable-decoder=rawvideo --enable-protocol=file"
 
+export COMMON_FLAGS="--enable-decoder=rawvideo --enable-protocol=file"
+export PREFIX=../ffmpeg-build
 
 # Build arm v6 v7a
 #./build_android_armeabi.sh
@@ -12,7 +13,7 @@ COMMON_FLAGS="--enable-decoder=rawvideo --enable-protocol=file"
 
 # Build arm64 v8a
 ./build_android_arm64_v8a.sh
-
+exit -1
 # Build x86
 ./build_android_x86.sh
 
@@ -22,5 +23,3 @@ COMMON_FLAGS="--enable-decoder=rawvideo --enable-protocol=file"
 # Build mips
 ./build_android_mips.sh
 
-# Build mips64   //may fail
-./build_android_mips64.sh

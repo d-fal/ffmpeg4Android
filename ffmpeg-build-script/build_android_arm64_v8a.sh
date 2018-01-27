@@ -1,6 +1,8 @@
 #!/bin/bash
 #Change NDK to your Android NDK location
-NDK=$HOME/Android/ndk
+
+pushd .
+cd ../ffmpeg
 PLATFORM=$NDK/platforms/android-21/arch-arm64/
 PREBUILT=$NDK/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64
 
@@ -26,7 +28,7 @@ function build_arm64
   ./configure \
   --logfile=conflog.txt \
   --target-os=android \
-  --prefix=./android/arm64-v8a \
+  --prefix=$PREFIX/armeabi-v8a \
   ${GENERAL} \
   --sysroot=$PLATFORM \
   --extra-cflags="" \
@@ -46,4 +48,6 @@ function build_arm64
 build_arm64
 
 
-echo Android ARM64 builds finished
+echo Android ARM64v8a builds finished
+
+popd

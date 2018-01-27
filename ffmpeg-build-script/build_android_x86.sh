@@ -26,7 +26,7 @@ function build_x86
   ./configure \
   --logfile=conflog.txt \
   --target-os=android \
-  --prefix=./android/x86 \
+  --prefix=$PREFIX/x86 \
   --arch=x86 \
   ${GENERAL} \
   --sysroot=$PLATFORM \

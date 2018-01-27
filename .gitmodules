@@ -1,0 +1,6 @@
+[submodule "ffmpeg"]
+	path = ffmpeg
+	url = https://github.com/FFmpeg/FFmpeg
+[submodule "x264"]
+	path = x264
+	url = https://github.com/mirror/x264

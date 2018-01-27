@@ -1,6 +1,8 @@
 #!/bin/bash
 #Change NDK to your Android NDK location
-NDK=$HOME/Android/ndk
+
+pushd .
+cd ../ffmpeg
 PLATFORM=$NDK/platforms/android-18/arch-arm/
 PREBUILT=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
 
@@ -24,7 +26,7 @@ function build_ARMv6
 {
   ./configure \
   --target-os=android \
-  --prefix=./android/armeabi \
+  --prefix=$PREFIX/armeabi \
   ${GENERAL} \
   --sysroot=$PLATFORM \
   --enable-shared \
@@ -47,3 +49,5 @@ function build_ARMv6
 build_ARMv6
 
 echo Android ARMEABI builds finished
+
+popd

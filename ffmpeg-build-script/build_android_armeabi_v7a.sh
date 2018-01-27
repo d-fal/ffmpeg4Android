@@ -1,6 +1,8 @@
 #!/bin/bash
 #Change NDK to your Android NDK location
-NDK=$HOME/Android/ndk
+
+pushd .
+cd ../ffmpeg
 PLATFORM=$NDK/platforms/android-18/arch-arm/
 PREBUILT=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
 
@@ -22,7 +24,7 @@ function build_ARMv7
 {
   ./configure \
   --target-os=android \
-  --prefix=./android/armeabi-v7a \
+  --prefix=$PREFIX/armeabi-v7a \
   ${GENERAL} \
   --sysroot=$PLATFORM \
   --enable-shared \
@@ -44,3 +46,5 @@ function build_ARMv7
 
 build_ARMv7
 echo Android ARMv7-a builds finished
+
+popd 

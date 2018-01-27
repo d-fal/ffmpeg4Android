@@ -24,7 +24,7 @@ function build_x86_64
   ./configure \
   --logfile=conflog.txt \
   --target-os=android \
-  --prefix=./android/x86_64 \
+  --prefix=$PREFIX/x86_64 \
   --arch=x86_64 \
   ${GENERAL} \
   --sysroot=$PLATFORM \

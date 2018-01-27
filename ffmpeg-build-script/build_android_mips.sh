@@ -24,8 +24,8 @@ function build_mips
 {
   ./configure \
   --logfile=conflog.txt \
-  --target-os=linux \
-  --prefix=./android/mips \
+  --target-os=android \
+  --prefix=$PREFIX/mips \
   --arch=mips \
   ${GENERAL} \
   --sysroot=$PLATFORM \

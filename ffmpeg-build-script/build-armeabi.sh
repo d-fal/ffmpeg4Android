@@ -22,7 +22,7 @@ function build_ARM
 {
   ./configure \
   --target-os=android \
-  --prefix=./android/armeabi \
+  --prefix=$PREFIX/armeabi \
   ${GENERAL} \
   --sysroot=$PLATFORM \
   --enable-shared \
