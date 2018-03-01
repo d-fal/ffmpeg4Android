@@ -1,0 +1,14 @@
+prefix=../ffmpeg-build/armeabi
+exec_prefix=${prefix}
+libdir=../ffmpeg-build/armeabi/lib
+includedir=../ffmpeg-build/armeabi/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 3.0.101
+Requires: 
+Requires.private: libavutil >= 56.7.100
+Conflicts:
+Libs: -L${libdir}  -lswresample 
+Libs.private: -lm
+Cflags: -I${includedir}

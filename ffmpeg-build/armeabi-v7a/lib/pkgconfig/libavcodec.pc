@@ -1,0 +1,14 @@
+prefix=../ffmpeg-build/armeabi-v7a
+exec_prefix=${prefix}
+libdir=../ffmpeg-build/armeabi-v7a/lib
+includedir=../ffmpeg-build/armeabi-v7a/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.9.100
+Requires: 
+Requires.private: libswresample >= 3.0.101, libavutil >= 56.7.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -lz -lx264 -pthread -lm
+Cflags: -I${includedir}

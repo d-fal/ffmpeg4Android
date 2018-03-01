@@ -1,0 +1,14 @@
+prefix=../ffmpeg-build/armeabi
+exec_prefix=${prefix}
+libdir=../ffmpeg-build/armeabi/lib
+includedir=../ffmpeg-build/armeabi/include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 55.0.100
+Requires: 
+Requires.private: libavutil >= 56.7.100
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: -lm
+Cflags: -I${includedir}
